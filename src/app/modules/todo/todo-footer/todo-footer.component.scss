@@ -86,9 +86,9 @@
   letter-spacing: -0.194444px;
   color: #9495A5;
   margin-top: rem(40);
-  margin-bottom: rem(72);
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: rem(72);
 }
 
 //768px
@@ -128,7 +128,8 @@
 
   .message {
     margin-top: rem(52);
-    margin-bottom: rem(52);
+    // margin-bottom: rem(52);
+    padding-bottom: rem(72);
     color: var(--text-color-footer);
   }
 }
