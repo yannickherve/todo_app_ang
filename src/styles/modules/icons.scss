@@ -1,0 +1,35 @@
+@import 'libs/functions';
+@import 'libs/variables';
+
+.btn_svg {
+  width: rem(16);
+  height: rem(12);
+}
+
+.socials-icons {
+  fill: #FFFFFF;
+  transition: .3s;
+}
+
+.big {
+  font-size: 2rem;
+  // color: red;
+}
+
+.logo-footer {
+  fill: #FFFFFF;
+}
+
+.socials-icons {
+  fill: #FFFFFF;
+  transition: .3s;
+}
+
+.logo {
+  width: rem(60);
+  height: rem(32);
+}
+
+.footer-svg {
+  fill: #FFFFFF;
+}

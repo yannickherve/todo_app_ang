@@ -1,0 +1,96 @@
+@import 'libs/functions';
+@import 'libs/variables';
+@import 'base/typography';
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: rem(12);
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: rem(2);
+  line-height: rem(14);
+
+  max-width: 100%;
+  transition: background-color 0.3s, color .3s;
+}
+
+.btn--primary {
+  @extend .btn;
+
+  width: rem(200);
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-around;
+  color: #FFFFFF;
+  border: none;
+
+  span {
+    padding-left: 10%;
+  }
+
+  &:hover {
+    .btn--block_svg {
+      background-color: #55A191;
+      color: white;
+    }
+
+    background-color: cyan;
+
+    .btn_svg {
+      stroke: #D8D8D8;
+    }
+  }
+}
+
+.primary_isDisabled {
+  color: #203A4C;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.btn--block_svg {
+  background-color: $block-svg-color;
+  max-width: 100%;
+  width: rem(48);
+
+  height: rem(48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn--secondary {
+  @extend .btn;
+
+  max-height: 100%;
+  min-width: rem(100);
+  max-width: rem(178);
+  height: rem(48);
+  font-weight: $font-weight-regular;
+  letter-spacing: rem(2);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  & > * {
+    color: red
+  }
+
+  &:hover {
+    background-color: red;
+
+    & > * {
+      color: #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+$verySmall: 375px!default;
+$small: 600px!default;
+$medium: 768px!default;
+$large: 992px!default;
+$ExtraLarge: 1200px!default;
+$XExtraLarge: 1440px!default;
+
+/*responsive breakpoints comments*/
+
+
+/* smartphones, Android phones, landscape iPhone */
+$verySmall-up: "only screen and (min-width: #{$verySmall})";
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+$small-up: "only screen and (min-width: #{$small})";
+
+/* Medium devices (landscape tablets, 768px and up) */
+$medium-up: "only screen and (min-width: #{$medium})";
+
+/* Large devices (laptops/desktops, 992px and up) */
+$large-up: "only screen and (min-width: #{$large})";
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+$ExtraLarge-up: "only screen and (min-width: #{$ExtraLarge})";
+
+$XExtraLarge-up: "only screen and (min-width: #{$XExtraLarge})";
+
+
+//max-width down
+$small-down: "only screen and (max-width: #{$small})";
+
+$medium-down: "only screen and (max-width: #{$medium})";
+
+$large-down: "only screen and (max-width: #{$large})";

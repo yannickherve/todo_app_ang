@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'libs/variables';
+@import 'libs/functions';
+@import 'libs/responsive';
+@import 'libs/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'modules/buttons';
+@import 'modules/icons';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+  height: 100%;
+}
+
+body {
+  --text-color: #494C6B;
+  --text-color-footer: #9495A5;
+  --text-deco-color: #D1D2DA;
+  --border-color: #E3E4F1;
+  --bkg-color: #FFFFFF;
+  --bkg-todo:#FFFFFF;
+  --hover-color: #494C6B;
+  --bkg-img-mobile: url('/assets/images/bg-mobile-light.jpg');
+  --bkg-img-desktop: url('/assets/images/bg-desktop-light.jpg');
+  --logo-change-mode: url('/assets/images/icon-moon.svg');
+}
+body.dark-theme {
+  --text-color: #C8CBE7;
+  --text-color-footer: #5B5E7E;
+  --text-deco-color: #4D5067;
+  --border-color: #393A4B;
+  --bkg-color: #171823;
+  --bkg-todo:#25273D;
+  --hover-color: #E3E4F1;
+  --bkg-img-mobile: url('/assets/images/bg-mobile-dark.jpg');
+  --bkg-img-desktop: url('/assets/images/bg-desktop-dark.jpg');
+  --logo-change-mode: url('/assets/images/icon-sun.svg');
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: $base-font-family;
+  font-weight: $font-weight-regular;
+  background-color: var(--bkg-color);
+}
+
+
+@media #{$small-up} {
+  //
+}
+
+//768px
+@media #{$medium-up} {
+  //
+}

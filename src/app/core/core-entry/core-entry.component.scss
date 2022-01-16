@@ -1,0 +1,35 @@
+@import 'modules/icons';
+@import 'libs/functions';
+@import 'libs/responsive';
+@import 'base/typography';
+
+//768px
+@media #{$medium-up} {
+  .circle-decoration {
+    background-color: red;
+  }
+
+}
+
+//992px
+@media #{$large-up}  {
+  .page-body {
+    padding: 0 rem(65);
+  }
+}
+
+//1200px
+@media #{$ExtraLarge-up} {
+  .page-body {
+    padding: 0 rem(100);
+    //margin-top: rem(54);
+  }
+}
+
+//1440px
+@media #{$XExtraLarge-up} {
+  .page-body {
+    padding: 0 rem(165);
+  }
+}
+

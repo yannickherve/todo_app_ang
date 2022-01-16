@@ -1,0 +1,26 @@
+<header class="page-header">
+  <nav class="presentation">
+    <p class="presentation-text">Todo</p>
+    <a class="presentation-logo" (click)="toggleDarkTheme()">
+      <!-- <img src="/assets/images/icon-moon.svg" alt="switch mode" /> -->
+    </a>
+  </nav>
+  <div class="txt-enter">
+    <div class="circle-decoration"></div>
+    <input
+      type="text"
+      name="new-todo"
+      id="new-todo"
+      class="new-todo"
+      placeholder="Create a new todo…"
+      [value]="description"
+      (keyup)="changeText($event)"
+      (keyup.enter)="addTodo()"
+    />
+  </div>
+
+  <app-todo-main></app-todo-main>
+
+  <app-todo-footer></app-todo-footer>
+
+</header>

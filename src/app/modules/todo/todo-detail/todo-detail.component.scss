@@ -1,0 +1,121 @@
+@import 'modules/icons';
+@import 'libs/functions';
+@import 'libs/responsive';
+@import 'base/typography';
+
+li.editing .view {
+	display: none;
+}
+
+li.editing {
+	padding: 0;
+}
+li.editing .edit {
+	display: block;
+	width: calc(100% - 60px);
+  height: rem(52);
+	margin: 0 0 0 60px;
+}
+li .edit {
+	display: none;
+}
+
+.view {
+  min-height: rem(52);
+  height: rem(52);
+  border-bottom: rem(1) solid var(--border-color);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: rem(16) rem(20);
+  background-color: var(--bkg-todo);
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--bkg-todo);
+    width: rem(20);
+    height: rem(20);
+    border: rem(1) solid var(--border-color);
+    border-radius: rem(20);
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    margin-right: rem(12);
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: rem(10);
+    height: rem(10);
+    transform: scale(0);
+    transition: 100ms transform ease-in-out;
+    transform-origin: center;
+    background-image: url('/assets/images/icon-check.svg');
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="checkbox"]:checked {
+    background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+  }
+  input[type="checkbox"]:checked + label {
+    text-decoration-line: line-through;
+    color: var(--text-deco-color);
+  }
+  input[type="checkbox"]:hover {
+    outline: 1px solid #c058f3;
+  }
+
+  .text-label {
+    word-break: break-all;
+    font-size: rem(12);
+    color: var(--text-color);
+    line-height: rem(12);
+    letter-spacing: -0.17px;
+  }
+
+  .destroy {
+    background-image: url('/assets/images/icon-cross.svg');
+    background-color: var(--bkg-todo);
+    background-size: cover;
+    margin-left: auto;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    margin-left: rem(10);
+  }
+
+}
+
+
+
+//768px
+@media #{$medium-up} {
+  .view {
+    height: rem(64);
+    padding: rem(20) rem(24);
+
+    input[type="checkbox"] {
+      margin-right: rem(24);
+      width: rem(24);
+      height: rem(24);
+      margin-right: rem(24);
+    }
+
+    .text-label {
+      font-size: rem(18);
+
+      line-height: rem(18);
+      letter-spacing: -0.25px;
+    }
+  }
+  li.editing .edit {
+    height: rem(64);
+  }
+}

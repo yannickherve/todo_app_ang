@@ -1,0 +1,12 @@
+<section class="main">
+  <ul class="todo-list" cdkDropList [cdkDropListData]="visibleTodos$ | async" (cdkDropListDropped)="drop($event)">
+    <app-todo-detail class="example-box"
+      *ngFor="let todo of visibleTodos$ | async"
+      [todo]="todo"
+      [isEditing]="editingId === todo.id"
+      (setEditingId)="setEditingId($event)"
+      cdkDrag
+    ></app-todo-detail>
+  </ul>
+</section>
+

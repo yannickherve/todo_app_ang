@@ -1,0 +1,77 @@
+<footer class="footer" [hidden]="noTodosClass$ | async">
+  <span class="todo-count">
+    {{ activeCount$ | async }} {{ itemsLeftText$ | async }}
+  </span>
+
+  <ul class="filters">
+    <li>
+      <a
+        href="/"
+        [ngClass]="{ selected: (filter$ | async) === filterEnum.all }"
+        (click)="changeFilter($event, filterEnum.all)"
+      >
+        All
+      </a>
+    </li>
+    <li>
+      <a
+        href="/"
+        [ngClass]="{ selected: (filter$ | async) === filterEnum.active }"
+        (click)="changeFilter($event, filterEnum.active)"
+      >
+        Active
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="/"
+        [ngClass]="{ selected: (filter$ | async) === filterEnum.completed }"
+        (click)="changeFilter($event, filterEnum.completed)"
+      >
+        Completed
+      </a>
+    </li>
+  </ul>
+
+  <span class="clear-completed">
+    <a href="/" (click)="removeCompleted($event)">
+      Clear Completed
+    </a>
+  </span>
+
+</footer>
+<div>
+  <ul class="filters-detached">
+    <li>
+      <a
+        href="/"
+        [ngClass]="{ selected: (filter$ | async) === filterEnum.all }"
+        (click)="changeFilter($event, filterEnum.all)"
+      >
+        All
+      </a>
+    </li>
+    <li>
+      <a
+        href="/"
+        [ngClass]="{ selected: (filter$ | async) === filterEnum.active }"
+        (click)="changeFilter($event, filterEnum.active)"
+      >
+        Active
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="/"
+        [ngClass]="{ selected: (filter$ | async) === filterEnum.completed }"
+        (click)="changeFilter($event, filterEnum.completed)"
+      >
+        Completed
+      </a>
+    </li>
+  </ul>
+</div>
+
+<span class="message" fxLayout="row" fxLayoutAlign="center end">Drag and drop to reorder list</span>
