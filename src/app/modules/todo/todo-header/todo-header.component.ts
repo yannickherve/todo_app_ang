@@ -23,6 +23,9 @@ export class TodoHeaderComponent implements OnInit {
   }
 
   addTodo(): void {
+    if(this.description.length === 0) {
+      return
+    }
     this.todosService.addTodo(this.description)
     this.description = ''
   }

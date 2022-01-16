@@ -54,12 +54,6 @@ export class TodoMainComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.visibleTodos$.subscribe(res => {
-      console.log(res);
-
-    })
-    console.log(this.test);
-
   }
 
   setEditingId(editingId: string | null): void {

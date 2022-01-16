@@ -13,6 +13,7 @@
       id="new-todo"
       class="new-todo"
       placeholder="Create a new todo…"
+      minlength="1"
       [value]="description"
       (keyup)="changeText($event)"
       (keyup.enter)="addTodo()"
