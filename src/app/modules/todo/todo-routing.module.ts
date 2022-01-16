@@ -4,9 +4,10 @@ import { TodoHomeComponent } from './todo-home/todo-home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'todolist',
     component: TodoHomeComponent
-  }
+  },
+  {path: '', redirectTo: 'todolist', pathMatch: 'full'},
 ];
 
 @NgModule({

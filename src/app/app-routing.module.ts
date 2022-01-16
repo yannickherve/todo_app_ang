@@ -9,14 +9,14 @@ const routes: Routes = [
     path: '',
     component: CoreEntryComponent,
     children: [
+      // {
+      //   path: '',
+      //   loadChildren: () =>
+      //     import('./pages/pages.module').then((m) => m.PagesModule),
+      //   data: {animation: 'HomePage'}
+      // },
       {
         path: '',
-        loadChildren: () =>
-          import('./pages/pages.module').then((m) => m.PagesModule),
-        data: {animation: 'HomePage'}
-      },
-      {
-        path: 'todolist',
         loadChildren: () =>
           import('./modules/todo/todo.module').then((m) => m.TodoModule)
       },
