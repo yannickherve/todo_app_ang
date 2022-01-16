@@ -65,6 +65,13 @@
     margin-right: rem(12);
   }
 
+  ::placeholder {
+    color: var(--text-color-placeholder);
+    font-weight: $font-weight-regular;
+    font-size: rem(12);
+    line-height: rem(12);
+  }
+
   .new-todo {
     border: none;
     outline: none;
@@ -73,7 +80,7 @@
     font-size: rem(12);
     line-height: rem(12);
     letter-spacing: -0.166667px;
-    color: #9495A5;
+    color: var(--text-color-typing);
     background-color: var(--bkg-todo);
   }
 }
@@ -114,6 +121,11 @@
         width: rem(24);
         height: rem(24);
         margin-right: rem(24);
+      }
+
+      ::placeholder {
+        font-size: rem(18);
+        line-height: rem(18);
       }
 
       .new-todo {
